@@ -38,10 +38,22 @@ nav a:hover {
     background-color: rgba(244, 189, 59, 0.494);
 }
 
+nav a.logo-link {
+    padding: 0; /* Remove padding for the logo link container */
+    line-height: 0; /* Prevents extra vertical space */
+}
+
+/* Remove hover effect specifically for the logo link */
+nav a.logo-link:hover {
+    background-color: transparent;
+}
+
 nav img {
-    width: 10%;
-    height: 10%;
-    object-fit: cover;
+    padding: 5px;
+    width: 150px; /* Use a fixed size for the logo */
+    height: auto; /* Let height adjust automatically */
+    object-fit: contain; /* Ensure the whole image fits */
     border-radius: 5px;
     background-color: #ffffff;
+    box-sizing: border-box;
 }
