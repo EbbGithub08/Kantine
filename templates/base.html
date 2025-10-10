@@ -7,6 +7,14 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <nav>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <ul>
+            <li><a href="{{ url_for('meny') }}">Meny</a></li>
+            <li><a href="{{ url_for('varer') }}">Varer</a></li>
+            <li><a href="{{ url_for('kontakt') }}">Kontakt</a></li>
+        </ul>
+    </nav>
     {% block content %}{% endblock %}
 </body>
 </html>

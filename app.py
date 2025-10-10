@@ -19,4 +19,4 @@ def kontakt():
     return render_template('kontakt.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
