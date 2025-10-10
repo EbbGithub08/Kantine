@@ -8,8 +8,8 @@ body {
     flex-direction: column;
     background-color: #e3e3e3;
     font-family: Arial, sans-serif;
-    color: #ffae2b;
-    margin: 0;
+    color: hsl(37, 100%, 58%);
+    margin: 10;
 }
 
 main {
