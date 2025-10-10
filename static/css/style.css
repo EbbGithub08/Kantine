@@ -1,7 +1,19 @@
+html {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: #e3e3e3;
     font-family: Arial, sans-serif;
     color: #ffae2b;
+    margin: 0;
+}
+
+main {
+    flex: 1;
 }
 
 nav {
@@ -10,7 +22,8 @@ nav {
     background-color: #959595;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+
 }
 
 nav ul {
@@ -39,21 +52,32 @@ nav a:hover {
 }
 
 nav a.logo-link {
-    padding: 0; /* Remove padding for the logo link container */
-    line-height: 0; /* Prevents extra vertical space */
+    padding: 0;
+    line-height: 0;
 }
 
-/* Remove hover effect specifically for the logo link */
 nav a.logo-link:hover {
     background-color: transparent;
 }
 
 nav img {
     padding: 5px;
-    width: 150px; /* Use a fixed size for the logo */
-    height: auto; /* Let height adjust automatically */
-    object-fit: contain; /* Ensure the whole image fits */
+    width: 150px;
+    height: auto;
+    object-fit: contain;
     border-radius: 5px;
     background-color: #ffffff;
     box-sizing: border-box;
 }
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #959595;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 7px;
+    justify-content: center
+}
+    
