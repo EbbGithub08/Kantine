@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     background-color: #ff9d00;
     font-family: Arial, sans-serif;
-    color: hsl(37, 100%, 58%);
+    color: hsl(0, 0%, 0%);
     margin: 0;
 }
 
@@ -85,7 +85,7 @@ footer {
     max-width: 800px;
     margin: 30px auto;
     padding: 20px 40px;
-    background-color: #ffffff;
+    background-color: #ffbc65;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -98,7 +98,7 @@ footer {
 .content-container h2 {
     margin-top: 40px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #f0f0f0;
+
 }
 
 .content-container p {
