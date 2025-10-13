@@ -6,22 +6,24 @@
 <div class="content-container">
     <h1>Varer til salgs</h1>
     <p>Her er en oversikt over standardvarene vi tilbyr i kantinen. Utvalget kan variere noe fra dag til dag.</p>
-    <ul class="varer-liste">
+    <div class="varer-grid">
         {% for vare in varer %}
             {% if vare.navn == 'God Morgen Yogurt' %}
-                <li id="yogurt-sale">
-                    <span class="vare-navn">{{ vare.navn }}</span>
-                    <div class="pris-container">
+                <div class="vare-kort" id="yogurt-sale">
+                    <img src="{{ url_for('static', filename='images/' + vare.bilde) }}" alt="{{ vare.navn }}" class="vare-bilde">
+                    <div class="vare-info">
+                        <span class="vare-navn">{{ vare.navn }}</span>
                         <span class="sale-text">GIGA ULTRA SALE</span>
                         <span class="vare-pris">{{ vare.pris }}</span>
                     </div>
-                </li>
+                </div>
             {% else %}
-                <li>
-                    <span class="vare-navn">{{ vare.navn }}</span><span class="vare-pris">{{ vare.pris }}</span>
-                </li>
+                <div class="vare-kort">
+                    <img src="{{ url_for('static', filename='images/' + vare.bilde) }}" alt="{{ vare.navn }}" class="vare-bilde">
+                    <div class="vare-info"><span class="vare-navn">{{ vare.navn }}</span><span class="vare-pris">{{ vare.pris }}</span></div>
+                </div>
             {% endif %}
         {% endfor %}
-    </ul>
+    </div>
 </div>
 {% endblock %}

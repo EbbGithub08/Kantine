@@ -86,6 +86,7 @@ footer {
     background-color: #fba73a;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .content-container h1, .content-container h2 {
@@ -103,7 +104,7 @@ footer {
     color: #4a4a4a;
     line-height: 1.7;
     font-size: 16px;
-    text-align: justify;
+    text-align: center;
 }
 
 .content-image {
@@ -114,22 +115,47 @@ footer {
     margin: 40px auto 10px auto;
 }
 
-.varer-liste {
-    list-style: none;
-    padding: 0;
+.varer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin-top: 30px;
 }
 
-.varer-liste li {
+.vare-kort {
+    background-color: #fef0d8;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+    overflow: hidden;
+    border: 5px solid #f9b939;
     display: flex;
-    justify-content: space-between;
-    padding: 15px 10px;
-    border-bottom: 1px solid #e0a85c;
-    font-size: 18px;
+    flex-direction: column;
 }
 
-.varer-liste li:last-child {
-    border-bottom: none;
+.vare-bilde {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.vare-info {
+    background-color: #ffc343dd;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+#yogurt-sale .vare-info {
+    padding: 10px 15px;
+}
+
+.vare-navn {
+    font-size: 17px;
+    font-weight: 500;
 }
 
 .vare-navn { color: #333; }
@@ -157,8 +183,8 @@ footer {
     border-radius: 50%;
     background-color: #e0a85c;
     margin-right: 20px;
-    flex-shrink: 0; /* Forhindrer at bildet krymper */
-    object-fit: cover; /* Sørger for at bildet fyller sirkelen uten å strekkes */
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
 .kontakt-info h3 {
@@ -185,14 +211,15 @@ footer {
     100% { background-position: 0% 50%; }
 }
 
-/* Yogurt salg stil */
 #yogurt-sale {
     background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
     background-size: 400% 400%;
     animation: advanced-rainbow 8s ease infinite;
-    border-radius: 10px;
-    padding: 15px 20px;
-    margin: 5px 0;
+}
+
+#yogurt-sale {
+    border: none;
+    display: block;
 }
 
 #yogurt-sale .vare-navn,
@@ -209,7 +236,7 @@ footer {
 
 .sale-text {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
     background-size: 400% 400%;
     -webkit-background-clip: text;
@@ -218,7 +245,6 @@ footer {
     animation: advanced-rainbow 2s ease infinite;
 }
 
-/* Meny-side stiler */
 .meny-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -229,7 +255,7 @@ footer {
 .meny-kort {
     display: flex;
     align-items: center;
-    background-color: #fef0d8;
+    background-color: #f3a520;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -256,18 +282,26 @@ footer {
 }
 
 .meny-rett {
-    font-size: 22px; /* Større tekst for matretten */
+    font-size: 22px;
     font-weight: bold;
     color: #333;
     margin: 0;
     text-align: left;
 }
 
-/* Spesialstil for fredagskortet */
+.meny-beskrivelse {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-style: italic;
+    text-align: left !important;
+}
+
 #fredag-kort {
-    grid-column: 1 / -1; /* Spenner over hele bredden */
-    justify-self: center; /* Sentrerer kortet i rutenettet */
-    width: calc(50% - 10px); /* Halv bredde for å matche de andre kortene */
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 10px);
     background: linear-gradient(110deg, #c69f38, #f9e08c, #c69f38);
     background-size: 200% 100%;
     animation: shining-gold 4s linear infinite;
@@ -277,6 +311,10 @@ footer {
 #fredag-kort h2, #fredag-kort .meny-rett {
     color: #4a380e;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+#fredag-kort .meny-beskrivelse {
+    color: #604a12;
 }
 
 @keyframes shining-gold {

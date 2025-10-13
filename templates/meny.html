@@ -5,7 +5,7 @@
 {% block content %}
 <div class="content-container">
     <h1>Ukens Meny</h1>
-    <p>Her er en oversikt over hva vi serverer til lunsj denne uken. Vi tar forbehold om små endringer. Vel bekomme!</p>
+    <p>Her er en oversikt over hva vi serverer til lunsj denne uken. Vi tar ikke forbehold om små endringer. Fakk deg!</p>
     <div class="meny-grid">
         {% for dagens_meny in meny %}
             {% if dagens_meny.dag == 'Fredag' %}
@@ -17,6 +17,7 @@
                     <div class="meny-info">
                         <h2>{{ dagens_meny.dag }}</h2>
                         <p class="meny-rett">{{ dagens_meny.rett }}</p>
+                        <p class="meny-beskrivelse">{{ dagens_meny.beskrivelse }}</p>
                     </div>
                 </div>
         {% endfor %}
