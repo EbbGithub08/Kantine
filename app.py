@@ -12,7 +12,16 @@ def meny():
 
 @app.route('/varer')
 def varer():
-    return render_template('varer.html')
+    varer_liste = [
+        {'navn': 'Ost og Skinke Sandwich', 'pris': '60 kr'},
+        {'navn': 'God Morgen Yogurt', 'pris': '30 kr'},
+        {'navn': 'Eple / Banan / Pære (Diverse Frukt)', 'pris': '15 kr'},
+        {'navn': 'Kaffe', 'pris': '25 kr'},
+        {'navn': 'Litago 0.5L', 'pris': '25 kr'},
+        {'navn': 'TINE IsKaffe', 'pris': '30 kr'},
+        {'navn': 'Wasa Sandwich', 'pris': '30 kr'}
+    ]
+    return render_template('varer.html', varer=varer_liste)
 
 @app.route('/kontakt')
 def kontakt():

@@ -3,5 +3,15 @@
 {% block title %}Varer{% endblock %}
 
 {% block content %}
-<h1>Varer</h1>
+<div class="content-container">
+    <h1>Varer til salgs</h1>
+    <p>Her er en oversikt over standardvarene vi tilbyr i kantinen. Utvalget kan variere noe fra dag til dag.</p>
+    <ul class="varer-liste">
+        {% for vare in varer %}
+            <li>
+                <span class="vare-navn">{{ vare.navn }}</span><span class="vare-pris">{{ vare.pris }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

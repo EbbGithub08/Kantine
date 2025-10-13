@@ -6,7 +6,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #ff9d00;
+    background-color: #ffffff;
     font-family: Arial, sans-serif;
     color: hsl(0, 0%, 0%);
     margin: 0;
@@ -19,7 +19,7 @@ main {
 nav {
     display: flex;
     align-items: center;
-    background-color: #b2b2b2;
+    background-color: #ffaa00;
     padding: 10px;
     border-radius: 10px;
 
@@ -38,7 +38,7 @@ nav li {
 }
 
 nav a {
-    color: rgb(226, 137, 21);
+    color: rgb(0, 0, 0);
     font-size: 20px;
     text-decoration: none;
     font-weight: bold;
@@ -48,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(244, 189, 59, 0.494);
+    background-color: rgba(116, 81, 0, 0.494);
 }
 
 nav a.logo-link {
@@ -115,4 +115,25 @@ footer {
     border-radius: 8px;
     margin: 40px auto 10px auto;
 }
+
+.varer-liste {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.varer-liste li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-bottom: 1px solid #e0a85c;
+    font-size: 18px;
+}
+
+.varer-liste li:last-child {
+    border-bottom: none;
+}
+
+.vare-navn { color: #333; }
+.vare-pris { color: #000; font-weight: bold; }
     
