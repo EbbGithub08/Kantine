@@ -3,5 +3,51 @@
 {% block title %}Kontakt{% endblock %}
 
 {% block content %}
-<h1>Kontakt</h1>
+<div class="content-container">
+    <h1>Kontakt Oss</h1>
+    <p>Her finner du kontaktinformasjon til nøkkelpersoner i kantinedriften. Ikke nøl med å ta kontakt ved spørsmål, innspill eller allergier.</p>
+
+    <div class="kontakt-liste">
+        <div class="kontakt-kort" id="ebbe-kort">
+            <img src="{{ url_for('static', filename='images/ebbe.jpg') }}" alt="Bilde av Ebbe Zelow" class="kontakt-bilde">
+            <div class="kontakt-info">
+                <h3>Ebbe Zelow</h3>
+                <p>Stilling: Big Boss Kokk</p>
+                <p>Telefon: 67676767</p>
+            </div>
+        </div>
+        <div class="kontakt-kort">
+            <img src="{{ url_for('static', filename='images/trym.jpg') }}" alt="Bilde av Kari Nordmann" class="kontakt-bilde">
+            <div class="kontakt-info">
+                <h3>Trym Trøan</h3>
+                <p>Stilling: Vaske dame</p>
+                <p>Telefon: 41414141</p>
+            </div>
+        </div>
+        <div class="kontakt-kort">
+            <img src="{{ url_for('static', filename='images/matheo.jpg') }}" alt="Bilde av Lise Johansen" class="kontakt-bilde">
+            <div class="kontakt-info">
+                <h3>Matheo Ruud</h3>
+                <p>Stilling: Servitør / Assistent</p>
+                <p>Telefon: 69696969</p>
+            </div>
+        </div>
+        <div class="kontakt-kort">
+            <img src="{{ url_for('static', filename='images/audun.jpg') }}" alt="Bilde av Per Hansen" class="kontakt-bilde">
+            <div class="kontakt-info">
+                <h3>Audun Mekelbekkersmekkel</h3>
+                <p>Stilling: Straffe-sjef</p>
+                <p>Telefon: 21212121</p>
+            </div>
+        </div>
+        <div class="kontakt-kort">
+            <img src="{{ url_for('static', filename='images/niko.jpg') }}" alt="Bilde av Niko" class="kontakt-bilde">
+            <div class="kontakt-info">
+                <h3>Nikolai Haukemannen</h3>
+                <p>Stilling: Penge Megleren</p>
+                <p>Telefon: 271271271</p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

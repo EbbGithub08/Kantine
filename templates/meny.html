@@ -3,5 +3,23 @@
 {% block title %}Meny{% endblock %}
 
 {% block content %}
-<h1>Meny</h1>
+<div class="content-container">
+    <h1>Ukens Meny</h1>
+    <p>Her er en oversikt over hva vi serverer til lunsj denne uken. Vi tar forbehold om små endringer. Vel bekomme!</p>
+    <div class="meny-grid">
+        {% for dagens_meny in meny %}
+            {% if dagens_meny.dag == 'Fredag' %}
+            <div class="meny-kort" id="fredag-kort">
+            {% else %}
+            <div class="meny-kort">
+            {% endif %}
+                    <img src="{{ url_for('static', filename='images/' + dagens_meny.bilde) }}" alt="Bilde av {{ dagens_meny.rett }}" class="meny-bilde">
+                    <div class="meny-info">
+                        <h2>{{ dagens_meny.dag }}</h2>
+                        <p class="meny-rett">{{ dagens_meny.rett }}</p>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

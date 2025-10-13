@@ -6,7 +6,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #fecc61;
     font-family: Arial, sans-serif;
     color: hsl(0, 0%, 0%);
     margin: 0;
@@ -21,7 +21,6 @@ nav {
     align-items: center;
     background-color: #ffaa00;
     padding: 10px;
-    border-radius: 10px;
 
 }
 
@@ -73,10 +72,9 @@ nav img {
 footer {
     display: flex;
     align-items: center;
-    background-color: #b2b2b2;
-    padding: 10px;
-    border-radius: 10px;
-    color: rgb(226, 137, 21);
+    background-color: #ffaa00;
+    padding: 20px;
+    color: rgb(0, 0, 0);
     font-size: 7px;
     justify-content: center
 }
@@ -84,14 +82,14 @@ footer {
 .content-container {
     max-width: 800px;
     margin: 30px auto;
-    padding: 20px 40px;
-    background-color: #ffbc65;
-    border-radius: 10px;
+    padding: 30px 30px;
+    background-color: #fba73a;
+    border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content-container h1, .content-container h2 {
-    color: #333;
+    color: #000000;
     text-align: center;
 }
 
@@ -136,4 +134,153 @@ footer {
 
 .vare-navn { color: #333; }
 .vare-pris { color: #000; font-weight: bold; }
+
+.kontakt-liste {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.kontakt-kort {
+    display: flex;
+    align-items: center;
+    background-color: #fef0d8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.kontakt-bilde {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e0a85c;
+    margin-right: 20px;
+    flex-shrink: 0; /* Forhindrer at bildet krymper */
+    object-fit: cover; /* Sørger for at bildet fyller sirkelen uten å strekkes */
+}
+
+.kontakt-info h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+.kontakt-info p { margin: 0; color: #4a4a4a; font-size: 15px; text-align: left; }
+
+#ebbe-kort {
+    background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
+    background-size: 400% 400%;
+    animation: advanced-rainbow 8s ease infinite;
+}
+
+#ebbe-kort .kontakt-info h3,
+#ebbe-kort .kontakt-info p {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes advanced-rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Yogurt salg stil */
+#yogurt-sale {
+    background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
+    background-size: 400% 400%;
+    animation: advanced-rainbow 8s ease infinite;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 5px 0;
+}
+
+#yogurt-sale .vare-navn,
+#yogurt-sale .vare-pris {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.pris-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sale-text {
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: advanced-rainbow 2s ease infinite;
+}
+
+/* Meny-side stiler */
+.meny-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.meny-kort {
+    display: flex;
+    align-items: center;
+    background-color: #fef0d8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.meny-bilde {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.meny-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.meny-kort h2 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.meny-rett {
+    font-size: 22px; /* Større tekst for matretten */
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    text-align: left;
+}
+
+/* Spesialstil for fredagskortet */
+#fredag-kort {
+    grid-column: 1 / -1; /* Spenner over hele bredden */
+    justify-self: center; /* Sentrerer kortet i rutenettet */
+    width: calc(50% - 10px); /* Halv bredde for å matche de andre kortene */
+    background: linear-gradient(110deg, #c69f38, #f9e08c, #c69f38);
+    background-size: 200% 100%;
+    animation: shining-gold 4s linear infinite;
+    border: 2px solid #b38f31;
+}
+
+#fredag-kort h2, #fredag-kort .meny-rett {
+    color: #4a380e;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes shining-gold {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
     

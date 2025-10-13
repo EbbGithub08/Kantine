@@ -8,9 +8,19 @@
     <p>Her er en oversikt over standardvarene vi tilbyr i kantinen. Utvalget kan variere noe fra dag til dag.</p>
     <ul class="varer-liste">
         {% for vare in varer %}
-            <li>
-                <span class="vare-navn">{{ vare.navn }}</span><span class="vare-pris">{{ vare.pris }}</span>
-            </li>
+            {% if vare.navn == 'God Morgen Yogurt' %}
+                <li id="yogurt-sale">
+                    <span class="vare-navn">{{ vare.navn }}</span>
+                    <div class="pris-container">
+                        <span class="sale-text">GIGA ULTRA SALE</span>
+                        <span class="vare-pris">{{ vare.pris }}</span>
+                    </div>
+                </li>
+            {% else %}
+                <li>
+                    <span class="vare-navn">{{ vare.navn }}</span><span class="vare-pris">{{ vare.pris }}</span>
+                </li>
+            {% endif %}
         {% endfor %}
     </ul>
 </div>
