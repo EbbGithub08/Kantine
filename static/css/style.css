@@ -62,12 +62,12 @@ nav a.logo-link {
     line-height: 0;
 }/* Spesifikk stil for logo-lenken for å fjerne unødvendig luft rundt bildet */
 
-/* Fjerner hover-effekten for logoen, slik at den ikke får farget bakgrunn */
+
 nav a.logo-link:hover {
     background-color: transparent;
-}
+}/* Fjerner hover-effekten for logoen, slik at den ikke får farget bakgrunn */
 
-/* Styling for selve logo-bildet (<img>) */
+
 nav img {
     padding: 5px;
     width: 150px;
@@ -76,9 +76,9 @@ nav img {
     border-radius: 5px;
     background-color: #ffffff;
     box-sizing: border-box;
-}
+}/* Styling for selve logo-bildet  */
 
-/* Styling for bunnteksten (footer) på siden */
+
 footer {
     display: flex;
     align-items: center;
@@ -87,9 +87,9 @@ footer {
     color: #000000;
     font-size: 7px;
     justify-content: center
-}
+}/* Styling for Footern på bunnen */
 
-/* Hovedcontainer for innholdet på sidene (f.eks. Velkommen-tekst, kontaktinfo) */
+
 .content-container {
     max-width: 800px;
     margin: 30px auto;
@@ -98,12 +98,12 @@ footer {
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
+}/* Hovedcontainer for innholdet på sidene*/
 
 .content-container h1, .content-container h2 {
     color: #000000;
     text-align: center;
-}
+} /* Styling for overskriftene h1 og h2*/
 
 .content-container h2 {
     margin-top: 40px;
@@ -115,8 +115,8 @@ footer {
     color: #4a4a4a;
     line-height: 1.7;
     font-size: 16px;
-    text-align: center;
-}
+    text-align: center; 
+}/* Styling for avsnittene / vanlige teksten*/
 
 .content-image {
     display: block;
@@ -124,17 +124,17 @@ footer {
     height: auto;
     border-radius: 8px;
     margin: 40px auto 10px auto;
-}
+} /* Styling for bildene */
 
-/* Grid-system for å organisere varene på 'Varer'-siden i kolonner */
+
 .varer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 30px;
-}
+}/* Grid system for å organisere varene på varer siden i kolonner */
 
-/* Styling for hvert enkelt kort som viser en vare */
+
 .vare-kort {
     background-color: #fef0d8;
     border-radius: 15px;
@@ -144,16 +144,16 @@ footer {
     border: 5px solid #f9b939;
     display: flex;
     flex-direction: column;
-}
+}/* Styling for hver av vare kortene */
 
-/* Styling for bildet av varen inne i et vare-kort */
+
 .vare-bilde {
     width: 100%;
     height: 150px;
     object-fit: cover;
-}
+}/* Styling for bildet av varen inni vare kortet */
 
-/* Container for tekstinformasjonen (navn og pris) under bildet på et vare-kort */
+
 .vare-info {
     background-color: #ffc343dd;
     padding: 15px;
@@ -162,11 +162,11 @@ footer {
     align-items: center;
     gap: 8px;
     flex-grow: 1;
-}
+}/* Container for tekstinformasjonen (navn og pris) under bildet på et vare-kort */
 
 #yogurt-sale .vare-info {
     padding: 10px 15px;
-}
+}/* Denne regelen gjelder bare for .vare-info som ligger inni elementet med id-en = yogurt-sale */
 
 .vare-navn {
     font-size: 17px;
@@ -179,7 +179,7 @@ footer {
 .kontakt-liste {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Bestemmer hvor mange kolonner av kontakt info jeg har, om det sto "1fr 2fr" så hadde den prøvd å ha 2 kolonner*/
     gap: 25px;
 }
 
@@ -202,35 +202,43 @@ footer {
     object-fit: cover;
 }
 
-/* Styling for overskriften (navnet) i kontaktinformasjonen */
+
 .kontakt-info h3 {
     margin: 0 0 5px 0;
     color: #333;
-}
+}/* Styling for Navnet i kontaktinformasjonen */
 
-/* Styling for paragrafene (stilling, telefon) i kontaktinformasjonen */
-.kontakt-info p { margin: 0; color: #4a4a4a; font-size: 15px; text-align: left; line-height: 1.4; }
 
-/* Spesialstyling for Ebbes kontaktkort med en animert regnbuebakgrunn */
+.kontakt-info p { margin: 0;
+    color: #4a4a4a; 
+    font-size: 15px; 
+    text-align: left; 
+    line-height: 1.4; 
+}/* Styling for paragrafene (stilling, telefon) i kontaktinformasjonen */
+
+
+
 #ebbe-kort {
+    /* Gir kortet en animert regnbue effekt */
     background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
-    background-size: 400% 400%;
-    animation: advanced-rainbow 8s ease infinite;
+    background-size: 400% 400%; /* For å kunne animere gradienten */
+    animation: advanced-rainbow 8s ease infinite; /* Starter animasjonen som går evig */
 }
 
 #ebbe-kort .kontakt-info h3,
 #ebbe-kort .kontakt-info p {
     color: white;
-    text-shadow: 1px 1px 3px #000000b3; /* Converted from rgba(0, 0, 0, 0.7) */
-}
+    text-shadow: 1px 1px 3px #000000b3; 
+}/* Setter teksten til hvit med skygge for bedre kontrast mot regnbuebakgrunnen */
 
 @keyframes advanced-rainbow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
+}/* Definerer bevegelsen for regnbue-gradienten */
 
 #yogurt-sale {
+    /* Gir hele seksjonen en animert regnbue-gradient, samme effekt som #ebbe-kort */
     background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
     background-size: 400% 400%;
     animation: advanced-rainbow 8s ease infinite;
@@ -238,15 +246,16 @@ footer {
 
 #yogurt-sale .vare-navn,
 #yogurt-sale .vare-pris {
+    /* Setter tekstfargen til hvit og legger på skygge for å gjøre teksten lesbar på gradienten */
     color: white;
-    text-shadow: 1px 1px 3px #000000b3; /* Converted from rgba(0, 0, 0, 0.7) */
+    text-shadow: 1px 1px 3px #000000b3; 
 }
 
 .pris-container {
     display: flex;
     align-items: center;
     gap: 15px;
-}
+}/* Bruker flex for å plassere pris elementer horisontalt med litt avstand mellom */
 
 .sale-text {
     font-weight: bold;
@@ -254,48 +263,49 @@ footer {
     background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
     background-size: 400% 400%;
     -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    background-clip: text; /* Sørger for at gradienten kun vises på selve teksten */
+    color: transparent; /* Gjør bakgrunnen synlig gjennom teksten */
     animation: advanced-rainbow 2s ease infinite;
-}
+}/* Gjør at "GIGA ULTRA SALE" teksten også har en regnbue effekt, bare at den er kjappere pga "animation: advanced-rainbow 2s ease infinite;" sånn at den ikke matcher likt som regnbue bakgrunden */
 
-/* Grid-system for å organisere ukemenyen på 'Meny'-siden */
 .meny-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* To kolonner med like bredde */
+    gap: 20px; /* Avstand mellom kortene */
     margin-top: 30px;
-}
+}/* Grid system for ukemeny på Meny siden */
 
-/* Styling for hvert enkelt kort i ukemenyen */
+
 .meny-kort {
     display: flex;
     align-items: center;
     background-color: #f3a520;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Myk skygge for å løfte kortet litt */
+}/* Styling for hvert enkelt kort i ukemenyen */
 
-/* Styling for bildet av matretten i meny-kortet */
+
 .meny-bilde {
     width: 120px;
     height: 120px;
-    object-fit: cover;
+    object-fit: cover; /* Bildet fyller rammen uten å forvrenge */
     border-radius: 10px;
-    flex-shrink: 0;
-}
+    flex-shrink: 0; /* Hindrer bildet fra å krympe */
+}/* Styling for bildet av matretten i meny kortene */
+
 
 .meny-info {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-}
+    margin-left: 20px; /* Avstand fra bildet */
+}/* Container for tekstinfo, plasserer elementer vertikalt */
+
 
 .meny-kort h2 {
     text-align: left;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Små marginer for å gi luft rundt overskriften */
 }
 
 .meny-rett {
@@ -311,35 +321,34 @@ footer {
     color: #555;
     margin-top: 8px;
     margin-bottom: 0;
-    font-style: italic;
-    text-align: left !important;
+    font-style: italic; /* Gjør beskrivelsen litt lettere å se på */
+    text-align: left !important; /* Sørger for at teksten alltid er venstrejustert */
 }
 
-/* Spesialstyling for fredagens menykort, gir det en skinnende gull-effekt */
+
 #fredag-kort {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc(50% - 10px);
-    background: linear-gradient(110deg, #c69f38, #f9e08c, #c69f38);
+    grid-column: 1 / -1; /* Tar opp hele bredden i gridet */
+    justify-self: center; /* Sentrerer kortet horisontalt */
+    width: calc(50% - 10px); /* Setter bredde til halvparten minus gap */
+    background: linear-gradient(110deg, #c69f38, #f9e08c, #c69f38); /* Gull-gradient */
     background-size: 200% 100%;
-    animation: shining-gold 4s linear infinite;
-    border: 2px solid #b38f31;
-}
+    animation: shining-gold 4s linear infinite; /* Flytter gradienten for glans-effekt */
+    border: 2px solid #b38f31; /* Markerer kantene med mørk gull */
+}/* Spesialstyling for fredagens menykort */
 
-/* Gir teksten på fredagskortet en mørk gullfarge med lys skygge for en "gravert" look */
+/* Tekstfarge og skygge for fredagskortet for kontrast */
 #fredag-kort h2, #fredag-kort .meny-rett {
-    color: #4a380e;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    color: #4a380e; /* Mørk gull-farge */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3); /* Lys skygge for gravert-effekt */
 }
 
-/* Setter en passende farge for beskrivelsen på fredagskortet */
+/* Beskrivelsen på fredagskortet får passende farge for lesbarhet */
 #fredag-kort .meny-beskrivelse {
     color: #604a12;
 }
 
-/* Definerer animasjonen for den skinnende gull-effekten ved å flytte bakgrunnen */
+/* Animasjon som flytter gull-gradienten for å gi skinnende effekt */
 @keyframes shining-gold {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
-    
