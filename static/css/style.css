@@ -1,64 +1,73 @@
-html {
-    height: 100%;
+html { /* Setter grunnlaget for at body kan fylle hele skjermhøyden */
+    height: 100%;  
 }
+
 
 body {
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Gjør at elementets innhold plasseres fleksibelt, slik at man enkelt kan justere posisjon, mellomrom og sentrering */
+    flex-direction: column; /* Bestemmer at elementene skal være vertikale*/
     background-color: #fecc61;
-    font-family: Arial, sans-serif;
-    color: hsl(0, 0%, 0%);
+    font-family: Arial, sans-serif; /* Bestemmer Fonten til nettsiden*/
+    color: #000; /* Farge valgt med Hex kode*/
     margin: 0;
-}
+} /* Body med globale effekter til hele nettsiden, slik som default bakgrundsfarge, Fonten og passer på at alt passer in riktig på nettsiden*/
+
 
 main {
-    flex: 1;
-}
+    flex: 1; /* Sørger for at hovedinnholdet (main) strekker seg og fyller all ledig plass mellom nav-bar og footer */
+} 
+
 
 nav {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alligner tingene i nav baren til midten både vertikalt of horisontalt på baren.*/
     background-color: #ffaa00;
     padding: 10px;
+} /* Starten på stylingen til navigasjons baren */
 
-}
 
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Fjerner standard punktmerking eller nummer fra lister*/
     padding: 0;
     margin: 10px;
     display: flex;
     gap: 20px;
-}
+} /* Gir nav baren riktig form og utsene*/
 
-nav li {
+
+nav li { 
     display: inline-block;
-}
+}/* Sørger for at liste elementene oppfører seg som blokk elementer for bedre kontroll over styling */
+
 
 nav a {
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-size: 20px;
     text-decoration: none;
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 5px;
     transition: background-color 0.3s;
-}
+}/* Generell styling for alle lenker i nav baren */
+
 
 nav a:hover {
-    background-color: rgba(116, 81, 0, 0.494);
-}
+    background-color: #7451007e;
+}/* Endrer bakgrunnsfargen når du muser over en lenke*/
+
 
 nav a.logo-link {
     padding: 0;
     line-height: 0;
-}
+}/* Spesifikk stil for logo-lenken for å fjerne unødvendig luft rundt bildet */
 
+/* Fjerner hover-effekten for logoen, slik at den ikke får farget bakgrunn */
 nav a.logo-link:hover {
     background-color: transparent;
 }
 
+/* Styling for selve logo-bildet (<img>) */
 nav img {
     padding: 5px;
     width: 150px;
@@ -69,16 +78,18 @@ nav img {
     box-sizing: border-box;
 }
 
+/* Styling for bunnteksten (footer) på siden */
 footer {
     display: flex;
     align-items: center;
     background-color: #ffaa00;
     padding: 20px;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-size: 7px;
     justify-content: center
 }
 
+/* Hovedcontainer for innholdet på sidene (f.eks. Velkommen-tekst, kontaktinfo) */
 .content-container {
     max-width: 800px;
     margin: 30px auto;
@@ -115,6 +126,7 @@ footer {
     margin: 40px auto 10px auto;
 }
 
+/* Grid-system for å organisere varene på 'Varer'-siden i kolonner */
 .varer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -122,6 +134,7 @@ footer {
     margin-top: 30px;
 }
 
+/* Styling for hvert enkelt kort som viser en vare */
 .vare-kort {
     background-color: #fef0d8;
     border-radius: 15px;
@@ -133,12 +146,14 @@ footer {
     flex-direction: column;
 }
 
+/* Styling for bildet av varen inne i et vare-kort */
 .vare-bilde {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
 
+/* Container for tekstinformasjonen (navn og pris) under bildet på et vare-kort */
 .vare-info {
     background-color: #ffc343dd;
     padding: 15px;
@@ -170,7 +185,7 @@ footer {
 
 .kontakt-kort {
     display: flex;
-    align-items: center;
+    align-items: left;
     background-color: #fef0d8;
     padding: 20px;
     border-radius: 15px;
@@ -187,12 +202,16 @@ footer {
     object-fit: cover;
 }
 
+/* Styling for overskriften (navnet) i kontaktinformasjonen */
 .kontakt-info h3 {
     margin: 0 0 5px 0;
     color: #333;
 }
-.kontakt-info p { margin: 0; color: #4a4a4a; font-size: 15px; text-align: left; }
 
+/* Styling for paragrafene (stilling, telefon) i kontaktinformasjonen */
+.kontakt-info p { margin: 0; color: #4a4a4a; font-size: 15px; text-align: left; line-height: 1.4; }
+
+/* Spesialstyling for Ebbes kontaktkort med en animert regnbuebakgrunn */
 #ebbe-kort {
     background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
     background-size: 400% 400%;
@@ -202,7 +221,7 @@ footer {
 #ebbe-kort .kontakt-info h3,
 #ebbe-kort .kontakt-info p {
     color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px #000000b3; /* Converted from rgba(0, 0, 0, 0.7) */
 }
 
 @keyframes advanced-rainbow {
@@ -217,15 +236,10 @@ footer {
     animation: advanced-rainbow 8s ease infinite;
 }
 
-#yogurt-sale {
-    border: none;
-    display: block;
-}
-
 #yogurt-sale .vare-navn,
 #yogurt-sale .vare-pris {
     color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px #000000b3; /* Converted from rgba(0, 0, 0, 0.7) */
 }
 
 .pris-container {
@@ -245,6 +259,7 @@ footer {
     animation: advanced-rainbow 2s ease infinite;
 }
 
+/* Grid-system for å organisere ukemenyen på 'Meny'-siden */
 .meny-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -252,6 +267,7 @@ footer {
     margin-top: 30px;
 }
 
+/* Styling for hvert enkelt kort i ukemenyen */
 .meny-kort {
     display: flex;
     align-items: center;
@@ -261,6 +277,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Styling for bildet av matretten i meny-kortet */
 .meny-bilde {
     width: 120px;
     height: 120px;
@@ -298,6 +315,7 @@ footer {
     text-align: left !important;
 }
 
+/* Spesialstyling for fredagens menykort, gir det en skinnende gull-effekt */
 #fredag-kort {
     grid-column: 1 / -1;
     justify-self: center;
@@ -308,15 +326,18 @@ footer {
     border: 2px solid #b38f31;
 }
 
+/* Gir teksten på fredagskortet en mørk gullfarge med lys skygge for en "gravert" look */
 #fredag-kort h2, #fredag-kort .meny-rett {
     color: #4a380e;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 }
 
+/* Setter en passende farge for beskrivelsen på fredagskortet */
 #fredag-kort .meny-beskrivelse {
     color: #604a12;
 }
 
+/* Definerer animasjonen for den skinnende gull-effekten ved å flytte bakgrunnen */
 @keyframes shining-gold {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
