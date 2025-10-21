@@ -12,6 +12,24 @@
     <p>100% Garati på at du tilbringer tredje time på dass</p>
     <p>Vi håper du blir ufornøyd med tilbudet. Bruk <a href="/meny">menyen</a> over for å utforske de ulike sidene. Fakk deg!!!</p>
     
+    {% if dagens_rett %}
+    <div class="dagens-rett-container">
+        <h2>Dagens Rett: {{ dagens_rett.dag }}</h2>
+        <a href="{{ url_for('meny') }}" class="card-link">
+            <div class="meny-kort dagens-rett-highlight">
+                <div class="today-badge">I DAG</div>
+                <img src="{{ url_for('static', filename='images/' + dagens_rett.bilde) }}" alt="Bilde av {{ dagens_rett.rett }}" class="meny-bilde">
+                <div class="meny-info">
+                    <p class="meny-rett">{{ dagens_rett.rett }}</p>
+                    <p class="meny-beskrivelse">{{ dagens_rett.beskrivelse }}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% else %}
+        <h2>Ingen varm lunsj i dag. Velkommen tilbake på mandag!</h2>
+    {% endif %}
+    
     <img src="{{ url_for('static', filename='images/kantine.jpg') }}" alt="Kantine Bilde" class="content-image">
 </div>
 {% endblock %}
