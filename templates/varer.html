@@ -8,7 +8,7 @@
     <p>Her er en oversikt over standardvarene vi tilbyr i kantinen. Utvalget kan variere noe fra dag til dag.</p>
     <div class="varer-grid">
         {% for vare in varer %}
-            {% if vare.navn == 'God Morgen Yogurt' %}
+            {% if vare.navn == 'God Morgen Yogurt' %} <!-- Om varen er god morgen yogurt så får den GIGA SALE css koden-->
                 <div class="vare-kort" id="yogurt-sale">
                     <img src="{{ url_for('static', filename='images/' + vare.bilde) }}" alt="{{ vare.navn }}" class="vare-bilde">
                     <div class="vare-info">
@@ -17,7 +17,7 @@
                         <span class="vare-pris">{{ vare.pris }}</span>
                     </div>
                 </div>
-            {% else %}
+            {% else %} <!-- Om ikke så får den vanlig varekort css med verdiene om varen hentet fra app.py-->
                 <div class="vare-kort">
                     <img src="{{ url_for('static', filename='images/' + vare.bilde) }}" alt="{{ vare.navn }}" class="vare-bilde">
                     <div class="vare-info"><span class="vare-navn">{{ vare.navn }}</span><span class="vare-pris">{{ vare.pris }}</span></div>

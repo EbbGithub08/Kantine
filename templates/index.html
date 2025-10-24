@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home{% endblock %} <!-- Setter nettside titel-->
 
 {% block content %}
-<div class="content-container">
+<div class="content-container"> <!-- Putter alt in i base containeren som all infoen er i-->
     <h1>Velkommen til den nye kantina!</h1>
     <p>Vi her hos Snobademiet er glade for å kunne introdusere den splitter nye Kantinen i syvende etasje. Det er veldig billig</p>
     
     <h2>Endelig et samlingspunkt for dårlig mat og ødeleggesle</h2>
     <p>Etter kort tids ønske fra ingen, har vi desverre fått på plass en kantine vi er ikke stolte av. Målet vårt er å tilby sykdom, variert og forferdelig mat som tar energi fra arbeidsdagen. Kantina skal også være et antisosialt samlingspunkt hvor kolleger kan møtes for en dårlig prat over et fært måltid.</p>
     <p>100% Garati på at du tilbringer tredje time på dass</p>
-    <p>Vi håper du blir ufornøyd med tilbudet. Bruk <a href="/meny">menyen</a> over for å utforske de ulike sidene. Fakk deg!!!</p>
+    <p>Vi håper du blir ufornøyd med tilbudet. Bruk <a href="/meny">menyen</a> over for å utforske de ulike sidene. Fakk deg!!!</p> <!-- Hardkodet fordi den trengs ikke å kunne varieres. -->
     
-    {% if dagens_rett %}
+    {% if dagens_rett %} <!-- Jinja if skjekk for å vise frem dagens rett-->
     <div class="dagens-rett-container">
-        <h2>Dagens Rett: {{ dagens_rett.dag }}</h2>
-        <a href="{{ url_for('meny') }}" class="card-link">
-            <div class="meny-kort dagens-rett-highlight">
+        <h2>Dagens Rett: {{ dagens_rett.dag }}</h2> <!-- Henter dagens rett fra app.py, kan gjøre det fordi jeg puttet "dagens_rett=dagens_rett" på returnen til home-->
+        <a href="{{ url_for('meny') }}" class="card-link"> <!-- Lager en lenke til meny siden når du trykker på dagens rett.-->
+            <div class="meny-kort dagens-rett-highlight"> 
                 <div class="today-badge">I DAG</div>
-                <img src="{{ url_for('static', filename='images/' + dagens_rett.bilde) }}" alt="Bilde av {{ dagens_rett.rett }}" class="meny-bilde">
+                <img src="{{ url_for('static', filename='images/' + dagens_rett.bilde) }}" alt="Bilde av {{ dagens_rett.rett }}" class="meny-bilde"> <!-- Henter bildet til dagens rett-->
                 <div class="meny-info">
                     <p class="meny-rett">{{ dagens_rett.rett }}</p>
                     <p class="meny-beskrivelse">{{ dagens_rett.beskrivelse }}</p>
@@ -27,7 +27,7 @@
         </a>
     </div>
     {% else %}
-        <h2>Ingen varm lunsj i dag. Velkommen tilbake på mandag!</h2>
+        <h2>Ingen varm lunsj i dag. Velkommen tilbake på mandag!</h2> <!-- gjør at i helgen så står det ingen rett men isteden denne meldingen.-->
     {% endif %}
     
     <img src="{{ url_for('static', filename='images/kantine.jpg') }}" alt="Kantine Bilde" class="content-image">

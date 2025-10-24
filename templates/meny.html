@@ -7,9 +7,8 @@
     <h1>Ukens Meny</h1>
     <p>Her er en oversikt over hva vi serverer til lunsj denne uken. Vi tar ikke forbehold om små endringer. Fakk deg!</p>
     <div class="meny-grid">
-        {% for dagens_meny in meny %} {# Itererer gjennom hver dag i ukemenyen #}
-            {# Bygger klassestrengen direkte. Legger til 'dagens-rett-highlight' hvis det er dagens rett. #}
-            <div class="meny-kort {% if dagens_meny.dag == dagens_navn %}dagens-rett-highlight{% endif %}">
+        {% for dagens_meny in meny %} {# Itererer gjennom hver dag i ukemenyen #} <!-- Går gjennom alle elementene i meny listen som er alle dagene.-->
+            <div class="meny-kort {% if dagens_meny.dag == dagens_navn %}dagens-rett-highlight{% endif %}"> <!-- Legger til ekstra css slik som animasjon og I DAG kortet om retten er dagens rett-->
                 {% if dagens_meny.dag == dagens_navn %}
                     <div class="today-badge">I DAG</div>
                 {% endif %}

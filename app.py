@@ -30,13 +30,13 @@ def home():
     dagens_rett = ukemeny_dict.get(dagens_navn) # Henter navnet til dagen fra ukement_dict som jeg forklarte før.
     return render_template('index.html', dagens_rett=dagens_rett) # Gir "index.html" tilgang til dagens_rett som en variabel
 
-@app.route('/meny')
+@app.route('/meny') # Gjør det samme som home med datetime, bare at den også henter hele menyen.
 def meny():
     today_english = datetime.now().strftime('%A')
     dagens_navn = dag_translation.get(today_english)
     return render_template('meny.html', meny=ukemeny_list, dagens_navn=dagens_navn)
 
-@app.route('/varer')
+@app.route('/varer') # Her har jeg puttet vare listen inni funksjonen fordi jeg trenger den bare inne på Varer siden, jeg har derfor meny listen uttenfor funksjonene fordi jeg trenger den til flere sider.
 def varer():
     varer_liste = [
         {'navn': 'Ost & Skinke Sandwich', 'pris': '60 kr', 'bilde': 'sandwich.jpg'},
@@ -53,4 +53,4 @@ def kontakt():
     return render_template('kontakt.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) # Debug=True gjør at jeg slipper å starte og stoppe flask serveren for å se endringer på nettsiden. kan bare reloade isstedenfor.
