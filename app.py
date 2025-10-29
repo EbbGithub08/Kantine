@@ -10,7 +10,7 @@ ukemeny_list = [
     {'dag': 'Onsdag', 'rett': 'Stekt Biff', 'bilde': 'onsdag.jpg', 'beskrivelse': 'Denne oppskriften kommer fra en gammel kollega som het Steve. Er bare en stekt biff.'},
     {'dag': 'Torsdag', 'rett': 'Slurpfish', 'bilde': 'torsdag.jpg', 'beskrivelse': 'En forfriskende og sloppy fiskerett som kan gjøre deg blå av glede.'},
     {'dag': 'Fredag', 'rett': 'Gold Pickled Fowl Foot', 'bilde': 'fredag.jpg', 'beskrivelse': 'En gulldelikatesse fra The Lands Between som bringer lykke og penger.'}
-]# Ordbok med all informasjonen om de forksjellige dagene av ukeplannen i seg.
+]# Liste hvor hvert element er en ordbok som har all informasjonen om de forksjellige dagene av ukeplannen i seg.
 
 
 

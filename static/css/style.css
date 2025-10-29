@@ -184,7 +184,6 @@ nav img {
     font-size: 16px;
     background: linear-gradient(270deg, #ff7b00, #ff007b, #007bff, #00ff7b, #ff7b00);
     background-size: 400% 400%;
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     animation: advanced-rainbow 2s ease infinite;
@@ -226,7 +225,6 @@ nav img {
     border-radius: 50%;
     background-color: #e0a85c;
     margin-right: 20px;
-    flex-shrink: 0;
     object-fit: cover;
 } /* Styling for kontaktpersonens bilde */
 
@@ -352,10 +350,6 @@ nav img {
     text-decoration: none;
     color: inherit;
 } /* Fjerner standard lenke-styling for kort som skal være klikkbare */
-
-.content-container a.card-link:hover {
-    transform: none;
-} /* Overstyrer hover-effekten for kort-lenker for å unngå at alt løfter seg */
 
 .card-link:hover .meny-kort {
     transform: translateY(-4px);
